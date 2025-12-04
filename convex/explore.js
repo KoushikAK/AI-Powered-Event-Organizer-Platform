@@ -114,3 +114,70 @@ export const getCategoryCounts = query({
     return counts;
   },
 });
+
+// General search/filter query
+export const getEvents = query({
+  args: {
+    category: v.optional(v.string()),
+    when: v.optional(v.string()), // "today", "this-weekend", "next-7-days", "online"
+    limit: v.optional(v.number()),
+  },
+  handler: async (ctx, args) => {
+    const now = Date.now();
+    let events = await ctx.db
+      .query("events")
+      .withIndex("by_start_date")
+      .filter((q) => q.gte(q.field("startDate"), now))
+      .collect();
+
+    // Filter by Category
+    if (args.category) {
+      events = events.filter((e) => e.category === args.category);
+    }
+
+    // Filter by Time / Type
+    if (args.when) {
+      const today = new Date();
+      const startOfDay = new Date(today.setHours(0, 0, 0, 0)).getTime();
+      const endOfDay = new Date(today.setHours(23, 59, 59, 999)).getTime();
+
+      switch (args.when) {
+        case "today":
+          events = events.filter(
+            (e) => e.startDate >= startOfDay && e.startDate <= endOfDay
+          );
+          break;
+        case "this-weekend":
+          // Calculate this coming weekend (Saturday & Sunday)
+          const dayOfWeek = today.getDay(); // 0 = Sunday, 6 = Saturday
+          const daysUntilSaturday = (6 - dayOfWeek + 7) % 7;
+          const saturdayStart = new Date(today);
+          saturdayStart.setDate(today.getDate() + daysUntilSaturday);
+          saturdayStart.setHours(0, 0, 0, 0);
+
+          const sundayEnd = new Date(saturdayStart);
+          sundayEnd.setDate(saturdayStart.getDate() + 1);
+          sundayEnd.setHours(23, 59, 59, 999);
+
+          events = events.filter(
+            (e) =>
+              e.startDate >= saturdayStart.getTime() &&
+              e.startDate <= sundayEnd.getTime()
+          );
+          break;
+        case "next-7-days":
+          const nextWeek = new Date(today);
+          nextWeek.setDate(today.getDate() + 7);
+          events = events.filter(
+            (e) => e.startDate >= now && e.startDate <= nextWeek.getTime()
+          );
+          break;
+        case "online":
+          events = events.filter((e) => e.locationType === "online");
+          break;
+      }
+    }
+
+    return events.slice(0, args.limit ?? 20);
+  },
+});

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +12,6 @@ import { useState } from "react";
 import { BarLoader } from "react-spinners";
 import { useStoreUser } from "@/hooks/use-store-user";
 import { useOnboarding } from "@/hooks/use-onboarding";
-
 
 const Header = () => {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -66,13 +65,17 @@ const Header = () => {
 
             <Authenticated>
               {/* Create Event Button */}
-              <Button variant="liquidMetal" size="sm" asChild className="flex gap-2 mr-2">
+              <Button
+                variant="liquidMetal"
+                size="sm"
+                asChild
+                className="flex gap-2 mr-2"
+              >
                 <Link href="/create-event">
                   <Plus className="w-4 h-4" />
                   <span className="hidden sm:inline">Create Event</span>
                 </Link>
               </Button>
-
 
               {/* User Button */}
               <UserButton
@@ -104,7 +107,6 @@ const Header = () => {
                 <Button size="sm">Sign In</Button>
               </SignInButton>
             </Unauthenticated>
-
           </div>
         </div>
 
@@ -113,8 +115,6 @@ const Header = () => {
             <BarLoader width={"100%"} color="#a855f7" />
           </div>
         )}
-
-
       </nav>
 
       {/* Onboarding Modal */}
