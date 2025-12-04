@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useRef, useEffect, useCallback } from 'react';
 import gsap from 'gsap';
@@ -34,51 +34,72 @@ export default function BlobCursor({
     return { left: rect.left, top: rect.top };
   }, []);
 
-  const handleMove = useCallback(e => {
-    const { left, top } = updateOffset();
-    const x = 'clientX' in e ? e.clientX : e.touches[0].clientX;
-    const y = 'clientY' in e ? e.clientY : e.touches[0].clientY;
+  const handleMove = useCallback(
+    (e) => {
+      const { left, top } = updateOffset();
 
-    blobsRef.current.forEach((el, i) => {
-      if (!el) return;
-      const isLead = i === 0;
-      gsap.to(el, {
-        x: x - left,
-        y: y - top,
-        duration: isLead ? fastDuration : slowDuration,
-        ease: isLead ? fastEase : slowEase
+      const isTouchEvent = e.touches && e.touches.length > 0;
+      const clientX = isTouchEvent ? e.touches[0].clientX : e.clientX;
+      const clientY = isTouchEvent ? e.touches[0].clientY : e.clientY;
+
+      blobsRef.current.forEach((el, i) => {
+        if (!el) return;
+        const isLead = i === 0;
+        gsap.to(el, {
+          x: clientX - left,
+          y: clientY - top,
+          duration: isLead ? fastDuration : slowDuration,
+          ease: isLead ? fastEase : slowEase
+        });
       });
-    });
-  }, [updateOffset, fastDuration, slowDuration, fastEase, slowEase]);
+    },
+    [updateOffset, fastDuration, slowDuration, fastEase, slowEase]
+  );
 
   useEffect(() => {
+    // listen on the whole window instead of the container,
+    // so we don't need pointer-events on the overlay at all
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('touchmove', handleMove);
+
     const onResize = () => updateOffset();
     window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, [updateOffset]);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('touchmove', handleMove);
+      window.removeEventListener('resize', onResize);
+    };
+  }, [handleMove, updateOffset]);
 
   return (
     <div
       ref={containerRef}
-      onMouseMove={handleMove}
-      onTouchMove={handleMove}
-      className="relative top-0 left-0 w-full h-full"
-      style={{ zIndex }}>
+      className="relative top-0 left-0 w-full h-full pointer-events-none"
+      style={{ zIndex }}
+    >
       {useFilter && (
         <svg className="absolute w-0 h-0">
           <filter id={filterId}>
-            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation={filterStdDeviation} />
+            <feGaussianBlur
+              in="SourceGraphic"
+              result="blur"
+              stdDeviation={filterStdDeviation}
+            />
             <feColorMatrix in="blur" values={filterColorMatrixValues} />
           </filter>
         </svg>
       )}
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden select-none cursor-default"
-        style={{ filter: useFilter ? `url(#${filterId})` : undefined }}>
+        style={{
+          filter: useFilter ? `url(#${filterId})` : undefined
+        }}
+      >
         {Array.from({ length: trailCount }).map((_, i) => (
           <div
             key={i}
-            ref={el => (blobsRef.current[i] = el)}
+            ref={(el) => (blobsRef.current[i] = el)}
             className="absolute will-change-transform transform -translate-x-1/2 -translate-y-1/2"
             style={{
               width: sizes[i],
@@ -87,7 +108,8 @@ export default function BlobCursor({
               backgroundColor: fillColor,
               opacity: opacities[i],
               boxShadow: `${shadowOffsetX}px ${shadowOffsetY}px ${shadowBlur}px 0 ${shadowColor}`
-            }}>
+            }}
+          >
             <div
               className="absolute"
               style={{
@@ -97,7 +119,8 @@ export default function BlobCursor({
                 left: (sizes[i] - innerSizes[i]) / 2,
                 backgroundColor: innerColor,
                 borderRadius: blobType === 'circle' ? '50%' : '0'
-              }} />
+              }}
+            />
           </div>
         ))}
       </div>

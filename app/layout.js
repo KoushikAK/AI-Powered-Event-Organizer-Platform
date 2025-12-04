@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/sonner"
 import Header from "@/components/Header";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 import { ClerkProvider } from "@clerk/nextjs";
+import { dark, neobrutalism, shadesOfPurple } from '@clerk/themes'
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -33,7 +34,9 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <ClerkProvider>
+          <ClerkProvider appearance={{
+            theme: 'neobrutalism',
+          }}>
             <ConvexClientProvider>
               <Header />
               <main className="relative min-h-screen md:pt-32"><div className="relative z-10">{children}</div>
