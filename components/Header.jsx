@@ -12,13 +12,14 @@ import { useState } from "react";
 import { BarLoader } from "react-spinners";
 import { useStoreUser } from "@/hooks/use-store-user";
 import { useOnboarding } from "@/hooks/use-onboarding";
+import OnboardingModal from "./onboarding-modal";
 
 const Header = () => {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
   const { isLoading } = useStoreUser();
-  // const { showOnboarding, handleOnboardingComplete, handleOnboardingSkip } =
-  //   useOnboarding();
+  const { showOnboarding, handleOnboardingComplete, handleOnboardingSkip } =
+    useOnboarding();
 
   const { has } = useAuth();
   const hasPro = has?.({ plan: "pro" });
@@ -118,13 +119,13 @@ const Header = () => {
       </nav>
 
       {/* Onboarding Modal */}
-      {/* <OnboardingModal
+      <OnboardingModal
         isOpen={showOnboarding}
         onClose={handleOnboardingSkip}
         onComplete={handleOnboardingComplete}
       />
 
-      <UpgradeModal
+      {/* <UpgradeModal
         isOpen={showUpgradeModal}
         onClose={() => setShowUpgradeModal(false)}
         trigger="header"

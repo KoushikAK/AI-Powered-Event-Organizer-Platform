@@ -233,7 +233,7 @@ export default function ExplorePage() {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1">
             {timeFilters.map((filter) => (
               <button
                 key={filter.id}
