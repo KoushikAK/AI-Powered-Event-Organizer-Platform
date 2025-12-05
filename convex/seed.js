@@ -626,6 +626,656 @@ Healthy snacks and herbal teas included.`,
       "https://images.unsplash.com/photo-1633356122544-f134324a6cee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NjkyNzJ8MHwxfHNlYXJjaHwxfHxyZWFjdCUyMGpzfGVufDB8fHx8MTc2Mjk0NjQ4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     themeColor: "#1e3a8a",
   },
+  {
+    title: "Cloud Native Summit 2025",
+    description: `Join the largest gathering of cloud native enthusiasts, developers, and thought leaders!
+
+Topics include:
+- Kubernetes best practices
+- Serverless architectures
+- Microservices patterns
+- Cloud security and compliance
+- DevOps culture and CI/CD
+
+Keynote speakers from top tech companies. Great opportunity to network and learn about the future of cloud computing.
+
+Lunch and swag bags provided for all attendees.`,
+    category: "tech",
+    tags: ["tech", "cloud", "kubernetes", "devops"],
+    city: "Bangalore",
+    state: "Karnataka",
+    venue: "https://maps.google.com/?q=Sheraton+Grand+Bangalore",
+    address: "Sheraton Grand, Whitefield, Bangalore",
+    capacity: 500,
+    ticketType: "paid",
+    ticketPrice: 2500,
+    coverImage:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80",
+    themeColor: "#0f172a",
+  },
+  {
+    title: "Jazz by the Bay",
+    description: `An enchanting evening of smooth jazz and soulful melodies by the sea!
+
+Featuring:
+- International jazz quartets
+- Local saxophone legends
+- Improvisational jam sessions
+- Wine and cheese tasting
+
+Relax under the stars and enjoy the rhythm of the night. Perfect for a romantic date or a chill evening with friends.`,
+    category: "music",
+    tags: ["music", "jazz", "concert", "nightlife"],
+    city: "Mumbai",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Marine+Drive+Mumbai",
+    address: "Open Air Theatre, Marine Drive, Mumbai",
+    capacity: 200,
+    ticketType: "paid",
+    ticketPrice: 1500,
+    coverImage:
+      "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=1200&q=80",
+    themeColor: "#4a044e",
+  },
+  {
+    title: "Digital Marketing Masterclass",
+    description: `Master the art of digital marketing in this intensive one-day workshop!
+
+Curriculum:
+- SEO & SEM strategies
+- Social media growth hacking
+- Content marketing that converts
+- Email marketing automation
+- Analytics and ROI measurement
+
+Led by industry experts with proven track records. Certificate of completion provided.`,
+    category: "business",
+    tags: ["business", "marketing", "digital", "growth"],
+    city: "Delhi",
+    state: "Delhi",
+    venue: "https://maps.google.com/?q=India+Habitat+Centre",
+    address: "India Habitat Centre, Lodhi Road, Delhi",
+    capacity: 60,
+    ticketType: "paid",
+    ticketPrice: 3000,
+    coverImage:
+      "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=1200&q=80",
+    themeColor: "#c2410c",
+  },
+  {
+    title: "Pottery Workshop for Beginners",
+    description: `Get your hands dirty and create something beautiful!
+
+What you'll learn:
+- Basics of clay preparation
+- Wheel throwing techniques
+- Hand-building methods
+- Glazing and firing basics
+
+Take home your own handmade mug or bowl. No prior experience needed. All materials included.`,
+    category: "art",
+    tags: ["art", "craft", "workshop", "creative"],
+    city: "Pune",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Koregaon+Park+Pune",
+    address: "The Clay Studio, Koregaon Park, Pune",
+    capacity: 15,
+    ticketType: "paid",
+    ticketPrice: 1200,
+    coverImage:
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200&q=80",
+    themeColor: "#a16207",
+  },
+  {
+    title: "Marathon for a Cause",
+    description: `Run for a greener future! Join our annual charity marathon.
+
+Categories:
+- 5K Fun Run
+- 10K Challenge
+- Half Marathon (21K)
+
+Proceeds go towards local tree plantation drives. Medal and breakfast for all finishers.`,
+    category: "sports",
+    tags: ["sports", "running", "marathon", "charity"],
+    city: "Hyderabad",
+    state: "Telangana",
+    venue: "https://maps.google.com/?q=Necklace+Road+Hyderabad",
+    address: "People's Plaza, Necklace Road, Hyderabad",
+    capacity: 1000,
+    ticketType: "paid",
+    ticketPrice: 500,
+    coverImage:
+      "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&q=80",
+    themeColor: "#15803d",
+  },
+  {
+    title: "Street Food Festival",
+    description: `A culinary journey through the flavors of India!
+
+Highlights:
+- Over 50 food stalls
+- Regional delicacies from 20 states
+- Live cooking demonstrations
+- Food photography contest
+- Live music performances
+
+Come hungry, leave happy! Entry ticket covers tasting portions at select stalls.`,
+    category: "food",
+    tags: ["food", "festival", "culture", "street-food"],
+    city: "Kolkata",
+    state: "West Bengal",
+    venue: "https://maps.google.com/?q=Eco+Park+Kolkata",
+    address: "Eco Park, New Town, Kolkata",
+    capacity: 500,
+    ticketType: "paid",
+    ticketPrice: 200,
+    coverImage:
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&q=80",
+    themeColor: "#b91c1c",
+  },
+  {
+    title: "Holistic Wellness Retreat",
+    description: `Rejuvenate your mind, body, and soul in the lap of nature.
+
+Includes:
+- Ayurvedic consultation
+- Yoga and meditation sessions
+- Organic spa treatments
+- Nature walks
+- Detox meals
+
+A perfect weekend getaway to disconnect from the chaos and reconnect with yourself.`,
+    category: "health",
+    tags: ["health", "wellness", "retreat", "yoga"],
+    city: "Kochi",
+    state: "Kerala",
+    venue: "https://maps.google.com/?q=Fort+Kochi",
+    address: "Wellness Resort, Fort Kochi, Kerala",
+    capacity: 20,
+    ticketType: "paid",
+    ticketPrice: 5000,
+    coverImage:
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=80",
+    themeColor: "#047857",
+  },
+  {
+    title: "Retro Gaming Night",
+    description: `Relive the golden era of gaming!
+
+Games available:
+- Pac-Man, Mario, Sonic
+- Street Fighter II tournaments
+- Classic pinball machines
+- Console corner (NES, SEGA, PS1)
+
+Cosplay encouraged! Winner of the high-score challenge gets a vintage console.`,
+    category: "gaming",
+    tags: ["gaming", "retro", "arcade", "fun"],
+    city: "Bangalore",
+    state: "Karnataka",
+    venue: "https://maps.google.com/?q=Indiranagar+Bangalore",
+    address: "Arcade Bar, Indiranagar, Bangalore",
+    capacity: 50,
+    ticketType: "paid",
+    ticketPrice: 800,
+    coverImage:
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80",
+    themeColor: "#7c3aed",
+  },
+  {
+    title: "Founders Mixer",
+    description: `An exclusive evening for startup founders and innovators.
+
+Agenda:
+- Fireside chat with a unicorn founder
+- Structured networking sessions
+- Problem-solving roundtables
+- Cocktails and dinner
+
+Strictly for founders and C-level executives. Approval required for registration.`,
+    category: "business",
+    tags: ["business", "startup", "networking", "founders"],
+    city: "Hyderabad",
+    state: "Telangana",
+    venue: "https://maps.google.com/?q=Hitex+Hyderabad",
+    address: "Novotel, HICC Complex, Hyderabad",
+    capacity: 30,
+    ticketType: "free",
+    coverImage:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80",
+    themeColor: "#1e40af",
+  },
+  {
+    title: "Midnight Cycling Tour",
+    description: `Explore the city lights on two wheels!
+
+Route:
+- Colaba Causeway
+- Marine Drive
+- Gateway of India
+- CST Station
+
+Safety gear and cycles provided. Refreshments at the end of the ride. Experience Mumbai like never before.`,
+    category: "outdoor",
+    tags: ["outdoor", "cycling", "adventure", "night"],
+    city: "Mumbai",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Colaba+Mumbai",
+    address: "Start Point: Colaba Causeway, Mumbai",
+    capacity: 40,
+    ticketType: "paid",
+    ticketPrice: 600,
+    coverImage:
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=1200&q=80",
+    themeColor: "#111827",
+  },
+  {
+    title: "Charity Gala Dinner",
+    description: `A night of elegance and giving back.
+
+Program:
+- Live orchestral performance
+- Silent auction
+- Keynote address by social activists
+- Gourmet 4-course dinner
+
+All funds raised support child education initiatives. Dress code: Black Tie.`,
+    category: "community",
+    tags: ["community", "charity", "gala", "social-cause"],
+    city: "Delhi",
+    state: "Delhi",
+    venue: "https://maps.google.com/?q=Taj+Palace+Delhi",
+    address: "Taj Palace, Chanakyapuri, Delhi",
+    capacity: 150,
+    ticketType: "paid",
+    ticketPrice: 5000,
+    coverImage:
+      "https://unsplash.com/photos/a-table-set-up-for-a-party-with-candles-and-flowers--3pvRUfQc-c",
+    themeColor: "#be123c",
+  },
+  {
+    title: "Data Science Bootcamp",
+    description: `Launch your career in Data Science!
+
+Modules:
+- Python for Data Science
+- Exploratory Data Analysis
+- Machine Learning Algorithms
+- Data Visualization with Tableau
+- Capstone Project
+
+Intensive weekend program. Mentorship from industry data scientists.`,
+    category: "education",
+    tags: ["education", "data-science", "python", "bootcamp"],
+    city: "Bangalore",
+    state: "Karnataka",
+    venue: "https://maps.google.com/?q=HSR+Layout+Bangalore",
+    address: "TechHub, HSR Layout, Bangalore",
+    capacity: 25,
+    ticketType: "paid",
+    ticketPrice: 4000,
+    coverImage:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    themeColor: "#0e7490",
+  },
+  {
+    title: "Stand-up Comedy Special",
+    description: `Get ready to laugh your heart out!
+
+Lineup:
+- 3 Opening Acts
+- Headliner: [Surprise Celebrity Comic]
+- Improv Comedy segment
+
+Grab a drink, sit back, and enjoy the show. Strictly 18+.`,
+    category: "art",
+    tags: ["art", "comedy", "entertainment", "nightlife"],
+    city: "Mumbai",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Canvas+Laugh+Club",
+    address: "Canvas Laugh Club, Lower Parel, Mumbai",
+    capacity: 100,
+    ticketType: "paid",
+    ticketPrice: 750,
+    coverImage:
+      "https://images.unsplash.com/photo-1585699324551-f6c309eedeca?w=1200&q=80",
+    themeColor: "#b45309",
+  },
+  {
+    title: "Organic Farmers Market",
+    description: `Fresh, local, and sustainable!
+
+Available:
+- Organic fruits and vegetables
+- Homemade jams and pickles
+- Handcrafted soaps
+- Eco-friendly products
+
+Meet the farmers and learn about sustainable living. Bring your own bags!`,
+    category: "community",
+    tags: ["community", "organic", "market", "sustainable"],
+    city: "Pune",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Empress+Garden+Pune",
+    address: "Empress Garden, Camp, Pune",
+    capacity: 200,
+    ticketType: "free",
+    coverImage:
+      "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1200&q=80",
+    themeColor: "#166534",
+  },
+  {
+    title: "Blockchain Developers Conference",
+    description: `Building the decentralized future.
+
+Tracks:
+- Smart Contract Security
+- DeFi Protocols
+- NFT Standards
+- Layer 2 Scaling Solutions
+- Web3 Infrastructure
+
+Hackathon included! Win prizes in crypto.`,
+    category: "tech",
+    tags: ["tech", "blockchain", "web3", "crypto"],
+    city: "Hyderabad",
+    state: "Telangana",
+    venue: "https://maps.google.com/?q=HICC+Hyderabad",
+    address: "HICC, Kondapur, Hyderabad",
+    capacity: 300,
+    ticketType: "paid",
+    ticketPrice: 1500,
+    coverImage:
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=1200&q=80",
+    themeColor: "#4338ca",
+  },
+  {
+    title: "Poetry Under the Stars",
+    description: `An intimate evening of spoken word and poetry.
+
+Featuring:
+- Renowned contemporary poets
+- Open mic slots for aspiring writers
+- Live acoustic background music
+- Book signing session
+
+Bring a blanket and your favorite verses. Coffee and pastries available.`,
+    category: "literature",
+    tags: ["literature", "poetry", "arts", "open-mic"],
+    city: "Jaipur",
+    state: "Rajasthan",
+    venue: "https://maps.google.com/?q=Diggi+Palace+Jaipur",
+    address: "Diggi Palace, Jaipur",
+    capacity: 80,
+    ticketType: "free",
+    coverImage:
+      "https://images.unsplash.com/photo-1490633874781-1c63cc424610?w=1200&q=80",
+    themeColor: "#701a75",
+  },
+  {
+    title: "Sustainable Fashion Week",
+    description: `Discover the future of fashion!
+
+Showcasing:
+- Eco-friendly clothing lines
+- Upcycling workshops
+- Panel talks on ethical fashion
+- Pop-up thrift store
+
+Meet designers who are changing the industry. Shop guilt-free!`,
+    category: "fashion",
+    tags: ["fashion", "sustainable", "lifestyle", "shopping"],
+    city: "Mumbai",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Jio+World+Drive+Mumbai",
+    address: "Jio World Drive, BKC, Mumbai",
+    capacity: 300,
+    ticketType: "paid",
+    ticketPrice: 1000,
+    coverImage:
+      "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1200&q=80",
+    themeColor: "#059669",
+  },
+  {
+    title: "Stargazing & Astronomy Night",
+    description: `Explore the cosmos with expert astronomers.
+
+Activities:
+- Telescope viewing sessions
+- Constellation mapping
+- Astrophotography basics
+- Talk on "Life on Mars"
+
+Escape the city lights and witness the beauty of the universe. Camping options available.`,
+    category: "science",
+    tags: ["science", "astronomy", "outdoor", "education"],
+    city: "Bangalore",
+    state: "Karnataka",
+    venue: "https://maps.google.com/?q=Nandi+Hills+Bangalore",
+    address: "Nandi Hills, Bangalore",
+    capacity: 40,
+    ticketType: "paid",
+    ticketPrice: 1200,
+    coverImage:
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=80",
+    themeColor: "#172554",
+  },
+  {
+    title: "Puppy Yoga & Adoption Drive",
+    description: `Yoga with a dose of cuteness!
+
+Event details:
+- 45-minute yoga session with puppies
+- Meet adoptable dogs from local shelters
+- Dog training tips from experts
+- Pet photography booth
+
+All proceeds go to animal welfare. Bring your own mat!`,
+    category: "pets",
+    tags: ["pets", "yoga", "charity", "wellness"],
+    city: "Delhi",
+    state: "Delhi",
+    venue: "https://maps.google.com/?q=Lodhi+Garden+Delhi",
+    address: "Lodhi Garden, Delhi",
+    capacity: 30,
+    ticketType: "paid",
+    ticketPrice: 800,
+    coverImage:
+      "https://images.unsplash.com/photo-1544568100-847a948585b9?w=1200&q=80",
+    themeColor: "#db2777",
+  },
+  {
+    title: "Indie Film Festival 2025",
+    description: `Celebrating independent cinema from around the globe.
+
+Screenings:
+- Award-winning short films
+- Documentaries on social issues
+- Experimental cinema
+- Q&A with directors
+
+Popcorn and soda on the house! Vote for the Audience Choice Award.`,
+    category: "film",
+    tags: ["film", "cinema", "festival", "arts"],
+    city: "Kolkata",
+    state: "West Bengal",
+    venue: "https://maps.google.com/?q=Nandan+Kolkata",
+    address: "Nandan, Kolkata",
+    capacity: 150,
+    ticketType: "paid",
+    ticketPrice: 300,
+    coverImage:
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200&q=80",
+    themeColor: "#9f1239",
+  },
+  {
+    title: "Heritage Walk: Old City Secrets",
+    description: `Walk through history in the lanes of the Old City.
+
+Highlights:
+- Visit 200-year-old havelis
+- Stories of forgotten kings
+- Traditional food tasting
+- Architecture photography tips
+
+Guided by a historian. Comfortable walking shoes recommended.`,
+    category: "history",
+    tags: ["history", "culture", "walking-tour", "education"],
+    city: "Ahmedabad",
+    state: "Gujarat",
+    venue: "https://maps.google.com/?q=Sidi+Saiyyed+Mosque",
+    address: "Sidi Saiyyed Mosque, Ahmedabad",
+    capacity: 20,
+    ticketType: "paid",
+    ticketPrice: 500,
+    coverImage:
+      "https://images.unsplash.com/photo-1583486826685-697968541a36?w=1200&q=80",
+    themeColor: "#78350f",
+  },
+  {
+    title: "Robotics Workshop for Kids",
+    description: `Build your first robot!
+
+Curriculum:
+- Introduction to electronics
+- assembling a line-follower robot
+- Basic coding logic
+- Robot race competition
+
+Kit included. Perfect for ages 10-15. Parents welcome to observe.`,
+    category: "science",
+    tags: ["science", "robotics", "kids", "education"],
+    city: "Chennai",
+    state: "Tamil Nadu",
+    venue: "https://maps.google.com/?q=IIT+Madras+Research+Park",
+    address: "IIT Madras Research Park, Chennai",
+    capacity: 25,
+    ticketType: "paid",
+    ticketPrice: 2000,
+    coverImage:
+      "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=1200&q=80",
+    themeColor: "#0284c7",
+  },
+  {
+    title: "Vintage Car Rally",
+    description: `A showcase of classic automobiles.
+
+Features:
+- Over 50 vintage cars and bikes
+- Restoration workshops
+- Jazz band performance
+- Best Dressed (Vintage Theme) contest
+
+A treat for petrolheads and history buffs alike.`,
+    category: "history",
+    tags: ["history", "cars", "vintage", "lifestyle"],
+    city: "Gurgaon",
+    state: "Haryana",
+    venue: "https://maps.google.com/?q=Leisure+Valley+Park+Gurgaon",
+    address: "Leisure Valley Park, Gurgaon",
+    capacity: 500,
+    ticketType: "free",
+    coverImage:
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=1200&q=80",
+    themeColor: "#b45309",
+  },
+  {
+    title: "DIY Home Decor Workshop",
+    description: `Spruce up your space on a budget!
+
+Learn to make:
+- Macrame wall hangings
+- Painted terracotta pots
+- Scented candles
+- Upcycled bottle lamps
+
+All materials provided. Take home your creations!`,
+    category: "art",
+    tags: ["art", "diy", "craft", "home"],
+    city: "Bangalore",
+    state: "Karnataka",
+    venue: "https://maps.google.com/?q=Koramangala+Bangalore",
+    address: "The Art House, Koramangala, Bangalore",
+    capacity: 15,
+    ticketType: "paid",
+    ticketPrice: 1500,
+    coverImage:
+      "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=1200&q=80",
+    themeColor: "#d97706",
+  },
+  {
+    title: "Book Launch: 'The Future is Now'",
+    description: `Launch of the highly anticipated sci-fi novel by [Author Name].
+
+Agenda:
+- Author reading
+- Panel discussion on AI in fiction
+- Book signing
+- High tea
+
+Get a signed copy at a discounted price!`,
+    category: "literature",
+    tags: ["literature", "books", "scifi", "culture"],
+    city: "Hyderabad",
+    state: "Telangana",
+    venue: "https://maps.google.com/?q=Crossword+Bookstore+Hyderabad",
+    address: "Crossword Bookstore, GVK One Mall, Hyderabad",
+    capacity: 50,
+    ticketType: "free",
+    coverImage:
+      "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=1200&q=80",
+    themeColor: "#4338ca",
+  },
+  {
+    title: "Pet Grooming Masterclass",
+    description: `Learn to groom your furry friend like a pro!
+
+Topics:
+- Brushing and detangling techniques
+- Nail trimming safety
+- Bathing best practices
+- Ear and eye cleaning
+
+Demonstration on live models. Q&A with a certified groomer.`,
+    category: "pets",
+    tags: ["pets", "grooming", "education", "workshop"],
+    city: "Pune",
+    state: "Maharashtra",
+    venue: "https://maps.google.com/?q=Viman+Nagar+Pune",
+    address: "Pawfect Spa, Viman Nagar, Pune",
+    capacity: 20,
+    ticketType: "paid",
+    ticketPrice: 1000,
+    coverImage:
+      "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=1200&q=80",
+    themeColor: "#be185d",
+  },
+  {
+    title: "Cosplay Convention 2025",
+    description: `The ultimate gathering for pop culture fans!
+
+Events:
+- Cosplay championship
+- Anime screenings
+- Manga exchange
+- Gaming zone
+- Artist alley
+
+Dress up as your favorite character and win big prizes!`,
+    category: "fashion",
+    tags: ["fashion", "cosplay", "anime", "pop-culture"],
+    city: "Delhi",
+    state: "Delhi",
+    venue: "https://maps.google.com/?q=Pragati+Maidan+Delhi",
+    address: "Pragati Maidan, Delhi",
+    capacity: 1000,
+    ticketType: "paid",
+    ticketPrice: 500,
+    coverImage:
+      "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=1200&q=80",
+    themeColor: "#6d28d9",
+  },
 ];
 
 // Helper functions

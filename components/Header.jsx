@@ -13,6 +13,10 @@ import { BarLoader } from "react-spinners";
 import { useStoreUser } from "@/hooks/use-store-user";
 import { useOnboarding } from "@/hooks/use-onboarding";
 import OnboardingModal from "./onboarding-modal";
+import SearchLocationBar from "./search-location-bar";
+import UpgradeModal from "./upgrade-modal";
+import { Badge } from "./ui/badge";
+import { Crown } from "lucide-react";
 
 const Header = () => {
   const [showUpgradeModal, setShowUpgradeModal] = useState(false);
@@ -46,6 +50,11 @@ const Header = () => {
               </Badge>
             )}
           </Link>
+
+          {/* Search & Location - Desktop Only */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <SearchLocationBar />
+          </div>
 
           {/* Right Side Actions */}
           <div className="items-center flex gap-1">
@@ -111,6 +120,11 @@ const Header = () => {
           </div>
         </div>
 
+        {/* Mobile Search & Location - Below Header */}
+        <div className="md:hidden border-t px-3 py-3">
+          <SearchLocationBar />
+        </div>
+
         {isLoading && (
           <div className="absolute bottom-0 left-0 w-full">
             <BarLoader width={"100%"} color="#a855f7" />
@@ -125,11 +139,11 @@ const Header = () => {
         onComplete={handleOnboardingComplete}
       />
 
-      {/* <UpgradeModal
+      <UpgradeModal
         isOpen={showUpgradeModal}
         onClose={() => setShowUpgradeModal(false)}
         trigger="header"
-      /> */}
+      />
     </>
   );
 };
