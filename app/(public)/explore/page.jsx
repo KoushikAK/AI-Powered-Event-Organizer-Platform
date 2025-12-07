@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
   Calendar,
@@ -51,7 +51,7 @@ const staggerParent = {
   },
 };
 
-export default function ExplorePage() {
+const ExploreContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
@@ -639,5 +639,22 @@ export default function ExplorePage() {
         </>
       )}
     </motion.div>
+  );
+};
+
+export default function ExplorePage() {
+  return (
+    <React.Suspense
+      fallback={
+        <div className="min-h-[60vh] flex flex-col items-center justify-center gap-3">
+          <Loader2 className="w-8 h-8 animate-spin text-purple-400" />
+          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            Loading...
+          </span>
+        </div>
+      }
+    >
+      <ExploreContent />
+    </React.Suspense>
   );
 }

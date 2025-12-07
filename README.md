@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spott - AI-Powered Event Organizer Platform
 
-## Getting Started
+![Spott Banner](https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=2000&auto=format&fit=crop)
 
-First, run the development server:
+Spott is a modern, full-stack event management platform that leverages AI to help organizers create compelling events and attendees find their next great experience. Built with performance and user experience in mind, it features real-time updates, secure ticketing, and a beautiful premium UI.
+
+## 🚀 Features
+
+- **authentication & User Profiles**: Secure login and account management powered by **Clerk**.
+- **Real-time Database**: Instant data synchronization using **Convex**.
+- **Event Management**: Create, update, and manage events with rich details.
+- **AI-Powered**: Integrated **Google Gemini AI** for content generation and smart suggestions.
+- **Ticketing System**:
+  - Paid & Free events support.
+  - Integration with **Stripe** for payments.
+  - **QR Code Check-in** for seamless attendee entry.
+- **Modern UI/UX**:
+  - Fully responsive design.
+  - Dark mode with glassmorphism effects.
+  - Smooth animations using **Framer Motion**.
+  - Components from **Shadcn UI**.
+
+## 🛠 Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Database**: [Convex](https://convex.dev/)
+- **Authentication**: [Clerk](https://clerk.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **AI**: [Google Generative AI SDK](https://ai.google.dev/)
+- **Payments**: [Stripe](https://stripe.com/)
+
+## 🏁 Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- Node.js 18+
+- npm, pnpm, or yarn
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/spott.git
+cd spott
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+# or
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory and add the following keys:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Convex
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Clerk Auth
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# Google Gemini AI
+GEMINI_API_KEY=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# App Base URL
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Run Development Server
+
+You need to run both the Next.js app and the Convex backend.
+
+```bash
+# Terminal 1: Run Convex
+npx convex dev
+
+# Terminal 2: Run Next.js
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📂 Project Structure
+
+```
+spott/
+├── app/                  # Next.js App Router pages
+│   ├── (main)/           # Main application layout
+│   ├── (public)/         # Public landing pages
+│   └── layout.jsx        # Root layout
+├── components/           # Reusable UI components
+│   ├── ui/               # Shadcn UI primitives
+│   └── ...               # Custom components (EventCard, Header, etc.)
+├── convex/               # Convex backend functions (schema, api, etc.)
+├── lib/                  # Utility functions
+├── hooks/                # Custom React hooks
+└── public/               # Static assets
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
